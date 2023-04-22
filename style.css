@@ -25,6 +25,10 @@
 main {
     display: grid;
     gap: 3.2rem;
+
+    padding-bottom: 10rem;
+
+    animation: downtop 700ms 350ms backwards;
 }
 
 body {
@@ -49,6 +53,8 @@ header {
     font-size: var(--fs-heading);
 
     text-align: center;
+
+    animation: topdown 700ms;
 
 }
 
@@ -114,14 +120,6 @@ header h1 {
     width: fit-content;
 }
 
-header {
-    animation-name: topdown;
-    animation-duration: 700ms;
-}
-
-main {
-    animation: downtop 700ms 350ms backwards;
-}
 
 @keyframes topdown {
     0% {
@@ -163,26 +161,26 @@ main {
     }
   }
   
-  @media (min-width: 930px) {
-    
+@media (min-width: 930px) {
+
     main {
-      grid-template-areas: "A B B"
-      "C C D";
+        grid-template-areas: "A B B"
+        "C C D";
     }
-  
+
     main div:nth-child(1) {
-      grid-area: A;
+        grid-area: A;
     }
-  
+
     main div:nth-child(2) {
-      grid-area: B;
+        grid-area: B;
     }
-  
+
     main div:nth-child(3) {
-      grid-area: C;
+        grid-area: C;
     }
-  
+
     main div:nth-child(4) {
-      grid-area: D;
+        grid-area: D;
     }
-  }
+    }
